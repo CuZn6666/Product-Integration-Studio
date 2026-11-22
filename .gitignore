@@ -1,0 +1,37 @@
+# Dependencies and generated builds
+node_modules/
+dist/
+target/
+Backend/.maven-cache/
+Front/.npm-cache/
+*.tsbuildinfo
+coverage/
+
+# Local databases, logs, and temporary files
+Backend/data/
+*.mv.db
+*.trace.db
+*.lock.db
+*.h2.db
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# OS and editor settings
+.DS_Store
+.idea/
+*.iml
+.vscode/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+*.pem
+*.key
