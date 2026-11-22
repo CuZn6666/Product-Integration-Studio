@@ -160,7 +160,7 @@ Acceptance checks:
 - [x] Successful deletion updates the table/statistics and clears the deleted product's latest flow result.
 - [x] Name and SKU searches ignore case and surrounding spaces and treat special characters literally.
 - [x] Each status filter and combined search/filter work; clear filters restores all loaded rows.
-- [x] Create/edit/sync/delete reapply current filters; refresh retains filters.
+- [x] Create/edit/sync/delete reapply current filters; the in-app Refresh button retains filters (a browser reload resets them).
 - [x] Empty table and no matches have separate, readable messages.
 - [x] `cd Backend && ./mvnw test`: 13 tests passed, including existing MVP regressions.
 - [x] `cd Front && npm test`: 17 tests passed across filter, API client, and UI behavior tests.
@@ -191,6 +191,18 @@ Publication of `CuZn6666/Product-Integration-Studio` as a public repository is e
 - [x] Frontend `npm test`: 17 passed; `npm run build`: succeeded.
 
 No application source or dependency configuration was changed for publication. Maven Wrapper and npm lockfile are included; local database records and generated artifacts are excluded. No project license was added. Backend tests emit a non-failing Mockito dynamic-agent warning on Java 21. This publication check reran automated tests/builds; earlier manual browser verification remains documented above.
+
+## Repository presentation — 22 November 2026
+
+- [x] Cross-checked README claims, endpoint list, validation rules, commands, and source links against the implementation.
+- [x] Added a Mermaid architecture diagram, technology-to-role/source table, complete CRUD/search behavior, simulation boundaries, and a two-minute demo guide.
+- [x] Captured genuine success/failure screenshots in a separate Chrome session against the production frontend on 5174 and backend on 8081, using an isolated in-memory database with synthetic seed products.
+- [x] Observed three React Flow nodes, two edges, successful sync, and readable missing-category failure; inspected screenshot layout.
+- [x] Reran backend tests (13 passed), frontend tests (17 passed), Maven packaging, and the TypeScript/Vite build successfully.
+- [x] Checked relative links, navigation anchors, command/script names, JDK requirement, and packaged JAR path.
+- [x] Independently repeated live sync success/failure in Chrome and exercised GET/create/edit/delete plus both sync outcomes through the default Vite proxy on 5173/8080, using a separate file database under ignored `Backend/target/readme-review/`.
+
+Only documentation and screenshot assets changed. Application code, dependencies, existing services, and the normal file-backed database were preserved. The user authorized committing and pushing this documentation update; no force push, history rewrite, or deployment is involved.
 
 ## Two-minute interview demo
 
